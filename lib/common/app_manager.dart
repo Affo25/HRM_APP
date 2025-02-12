@@ -1,6 +1,8 @@
+import 'package:animated_snack_bar/animated_snack_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_navigation/src/snackbar/snackbar.dart';
 import 'package:toastification/toastification.dart';
 
 import 'app_colors.dart';
@@ -35,7 +37,22 @@ class AppManager {
   }
 }
 
+getSuccessMessage(BuildContext context, String txt) {
+  AnimatedSnackBar.material(
+    txt,
+    type: AnimatedSnackBarType.success,
+    duration: const Duration(seconds: 5), // Position of snackbar on mobile devices
+  ).show(context);
+}
 
+getErrorMessage(BuildContext context, String txt) {
+  AnimatedSnackBar.material(
+    txt,
+    type: AnimatedSnackBarType.error,
+    duration: const Duration(seconds: 5),
+    // Position of snackbar on mobile devices
+  ).show(context);
+}
 
   successMessageToast(BuildContext context, String txt) {
     toastification.show(
@@ -73,7 +90,7 @@ class AppManager {
   );
 }
 
- defaultSuccessMessage( String txt) {
+defaultSuccessMessage( String txt) {
   Get.showSnackbar(
      GetSnackBar(
        snackPosition: SnackPosition.TOP,

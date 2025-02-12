@@ -1,4 +1,4 @@
-# hrm_attendance_app
+# hrm_system
 
 A new Flutter project.
 

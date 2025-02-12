@@ -1,6 +1,7 @@
 
+import 'package:hrm_system/model/register_model.dart';
 
-import 'guest_model.dart';
+import 'attendance_model.dart';
 
 class Globals {
 
@@ -14,4 +15,13 @@ class Globals {
   static Function? updateLeave;
   static String instituteName = "";
 
+  static RegisterModel? model;
+
+  static AttendanceModel? selectedModel;
+
+  static AttendanceModel? markUserAttendance;
+
+  static RegisterModel? Adminmodel;
+
+  static RegisterModel? selectedModelforAttendance;
 }

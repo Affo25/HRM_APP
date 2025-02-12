@@ -2,6 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import '../common/app_colors.dart';
 import '../common/text_design.dart';
 
@@ -98,7 +100,7 @@ class RoundedButton3 extends StatelessWidget{
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(15),
-      width: MediaQuery.sizeOf(context).width/1.2,
+      width: Get.width/1.2,
       height: 60,
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(350)),
